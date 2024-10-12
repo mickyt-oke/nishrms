@@ -14,7 +14,7 @@ if (count($_POST)>0){
       $user->password = md5($user->password);
       if ($user->login($user->username, $user->password)) {
 		  $_SESSION['loggedin_time'] = time();
-        ($_SESSION['us3rgr0up'] == 118) ? redirectTo('welcome.php') : redirectTo('dash.php');
+        ($_SESSION['us3rgr0up'] == 118) ? redirectTo('welcome.php') : redirectTo('dashboard.php');
       }
       else {
         $errors[] = "Authentication failed. Wrong credentials";
@@ -120,11 +120,6 @@ if (count($_POST)>0){
 									<path d="M 20.7895 0.977 L 19.3752 -0.4364 L 10.081 8.8522 L 0.7869 -0.4364 L -0.6274 0.977 L 8.6668 10.2656 L -0.6274 19.5542 L 0.7869 20.9676 L 10.081 11.679 L 19.3752 20.9676 L 20.7895 19.5542 L 11.4953 10.2656 L 20.7895 0.977 Z"></path>
 								</svg>
 							</button>
-
-							<!-- 
-									Mobile Menu Logo 
-									Logo : height: 70px max
-								-->
 							<a class="navbar-brand" href="#">
 								<img src="assets/img/nis-logo.jpg" width="110" height="38" alt="...">
 							</a>
@@ -224,7 +219,7 @@ if (count($_POST)>0){
 											
 												<input type="password" name="password" placeholder="" class="form-control" required />
 										</div>
-										&nbsp; &nbsp;
+										&nbsp;
 										<div class="form-group">
 											<button type="submit" class="btn w-100 btn-lg btn-success bg-gradient-success">
 												<i class="fa fa-lock"></i> Login
