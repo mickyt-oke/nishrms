@@ -10,10 +10,10 @@
 	<meta content="MICHAEL OKE" name="author">
 	<link href="assets/img/brand/favicon.ico" rel="icon" type="image/icon">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
-	<<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 	<link href="assets/css/icons.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-		<link href="assets/css/dashboard.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/dashboard.css" rel="stylesheet" type="text/css">
 	<link href="assets/plugins/tabs/style.css" rel="stylesheet" type="text/css">
 	<link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
 	<link href="assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet" />

@@ -1,7 +1,15 @@
 <?php require_once 'core/init.php';
 		require_once 'core/init2.php';
+		session_start();
+		if(!(isset($_SESSION["profile"]))) {
+			$error[] = "Session Timeout. Please reauthenticate to continue";
+			header("Location:index.php?session_expired");
+		} else{
+			$profile = $_SESSION["profile"];
+		}
+		?>
 
-	if(isset($_POST['upload'])) {
+<?php if(isset($_POST['upload'])) {
 		if($_FILES['csv_file']['name']) {
 		$filename = explode("." , $_FILES['csv_file']['name']);
 		if(end($filename) == "csv"){

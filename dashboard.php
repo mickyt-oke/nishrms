@@ -12,12 +12,16 @@ if(!(isset($_SESSION["profile"]))) {
 <?php require_once 'inc/header.php'; ?>
 <!-- Main -->
 <div id="main-wrapper">
+	<div class="">
 		<div class="row">
 			<div class="col-lg-12">
+				<div class="card shadow">
 					<div class="card-header bg-gradient-success">
 						<h2 class="mb-0 text-white text-center">AUTOMATED STAFF NOMINAL ROLL</h2>
 					</div>
-						<form class="form-control" method="post" action="#">
+					<div class="card-body">
+						<div class="row">
+						<form method="post" action="#">
 							<div class="table-responsive">
 								<?php
 								$query = mysqli_query($con, "SELECT * FROM profile ;");
@@ -76,5 +80,10 @@ if(!(isset($_SESSION["profile"]))) {
 						</form>
 			</div>
 		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php include_once 'inc/footer.php'; ?>
