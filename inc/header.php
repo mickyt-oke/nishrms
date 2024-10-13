@@ -10,11 +10,10 @@
 	<meta content="MICHAEL OKE" name="author">
 	<link href="assets/img/brand/favicon.ico" rel="icon" type="image/icon">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<<link rel="stylesheet" href="assets/css/main.css" />
 	<link href="assets/css/icons.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link href="assets/css/dashboard.css" rel="stylesheet" type="text/css">
-	<link href="assets/plugins/fileuploads/css/dropify.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/dashboard.css" rel="stylesheet" type="text/css">
 	<link href="assets/plugins/tabs/style.css" rel="stylesheet" type="text/css">
 	<link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
 	<link href="assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet" />
@@ -23,8 +22,6 @@
 	<link rel="stylesheet" href="assets/css/vendor_bundle.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap">
 	<link rel="stylesheet" href="assets/css/theme.docs.css">
-	<link rel="stylesheet" href="assets/css/core.min.css">
-	<link rel="stylesheet" href="assets/css/vendor_bundle.min.css">
 </head>
 
 <body class="is-preload homepage">
@@ -79,7 +76,7 @@
 									Mobile Menu Logo 
 									Logo : height: 70px max
 								-->
-							<a class="navbar-brand" href="#">
+							<a class="navbar-brand" href="index.php">
 								<img src="assets/img/nis-logo.jpg" width="110" height="38" alt="...">
 							</a>
 
@@ -93,7 +90,7 @@
 
 								
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="dashboard.php">
 										Main
 									</a>
 								</li>
@@ -111,6 +108,27 @@
 							</ul>
 							<!-- /navbar : navigation -->
 					</div>
+
+					<!-- OPTIONS -->
+					<ul class="list-inline list-unstyled mb-0 d-flex align-items-end">
+
+						<li class="list-inline-item mx-1 dropdown">
+
+
+
+
+							<a href="logout.php" class="btn btn-sm btn-danger btn-pill">
+								<span class="group-icon">
+									<i class="fi fi-user-male"></i>
+									<i class="fi fi-close"></i>
+								</span>
+								<span>Logout</span>
+							</a>
+
+						</li>
+
+					</ul>
+					<!-- /OPTIONS -->
 				</nav>
 
 			</div>

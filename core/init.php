@@ -2,7 +2,6 @@
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 error_reporting(1);
-session_start();
 
 // Create and initialize variables
 $errors = array();
@@ -18,12 +17,12 @@ require_once APP_ROOT . "core/common.php";
 require_once APP_ROOT . "functions/functions.php";
 
 //Class instances
-// $profile = new Profile();
-// $user = new User();
+//$profile = new Profile();
+$user = new User();
+$session = new Session();
 
 
-
-//$message = $session->message();
+$message = $session->message();
 
 // Obtain the filename of current page
 $page = basename($_SERVER['PHP_SELF']);

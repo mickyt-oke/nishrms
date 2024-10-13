@@ -3,16 +3,15 @@ require_once 'core/init2.php';
 
 if (count($_POST)>0){
 
-	// Process form request
   if (isset($_POST['login'])) {
-      $user->username = trim($_POST['username']);
-      $user->password = trim($_POST['password']);
+      $user->uname = trim($_POST['username']);
+      $user->pswd = trim($_POST['password']);
 
     // Ensure no field is empty
-    if (!empty($user->username) && !empty($user->password)) {
+    if (!empty($user->uname) && !empty($user->pswd)) {
       // Hash password
-      $user->password = md5($user->password);
-      if ($user->login($user->username, $user->password)) {
+      $user->pswd = md5($user->pswd);
+      if ($user->login($user->uname, $user->pswd)) {
 		  $_SESSION['loggedin_time'] = time();
         ($_SESSION['us3rgr0up'] == 118) ? redirectTo('welcome.php') : redirectTo('dashboard.php');
       }
@@ -140,7 +139,7 @@ if (count($_POST)>0){
 
 
 							<a href="#" aria-label="Admin Sign In" class="js-ajax-modal btn btn-sm btn-secondary btn-pill"
-								data-href="_ajax/modal_signin.html"
+								data-href="#"
 								data-ajax-modal-size="modal-md"
 								data-ajax-modal-centered="true"
 								data-ajax-modal-backdrop="static">
@@ -183,10 +182,7 @@ if (count($_POST)>0){
 						<!-- main title -->
 						<h1 class="display-4 fw-bold mb-0">
 							<span class="d-inline-block">
-
-								<!-- <span class="h6 fw-normal d-block text-align-end text-center-xs">
-										Over 28.988 Properties
-									</span> -->
+									<?php error($errors); ?>
 
 								<span class="text-success">NIS</span> E-HRM
 							</span>
@@ -204,14 +200,13 @@ if (count($_POST)>0){
 						<div class="d-inline-block bg-white shadow-primary-xs rounded p-4 p-md-5 w-100 max-w-450 text-align-start">
 							<div class="modal-header">
 							<h3>Sign in with Credentials</h3>
-                        		<?php error($errors); ?>
         					</div>
 								<div class="modal-body">
 									<form action="index.php" method="post" id="form" onsubmit="return validateForm()">
 
 										<div class="form-group">
 											<label class="form-label">UserName</label>
-												<input type="email" name="username" placeholder="Domain Email" class="form-control" required />
+												<input type="email" name="username" placeholder="Email" class="form-control" required />
 											</div>
 										&nbsp;
 										<div class="form-group">
